@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>950</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>950</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#frame {
+	background-color: rgb(0, 1, 171);
+}
+#frame_main {
+	background-color: rgb(238, 238, 238);
+}
+#label_title {
+	font: 9pt &quot;Flexi IBM VGA False&quot;;
+	color: rgb(255, 255, 255);
+}
+
+QTableView { 
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(120, 120, 120);
+  	border-left-color: rgb(120, 120, 120);
+  	border-right-color: rgb(200, 200, 200);
+  	border-bottom-color: rgb(200, 200, 200);
+}
+QLineEdit:read-only { background-color: rgb(240, 240, 240); }
+
+QTableView::item:selected, QTableView::item:hover {
+    background-color: rgb(0, 1, 171);
+    color: white;
+}
+
+/*QPUSHBUTTON*/
+QPushButton { 
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(200, 200, 200);
+  	border-left-color: rgb(200, 200, 200);
+  	border-right-color: rgb(100, 100, 100);
+  	border-bottom-color: rgb(100, 100, 100);
+	background-color: rgb(238, 238, 238); 
+}
+QPushButton:pressed { 
+	background-color: rgb(249, 249, 249);
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(100, 100, 100);
+  	border-left-color: rgb(100, 100, 100);
+  	border-right-color: rgb(200, 200, 200);
+  	border-bottom-color: rgb(200, 200, 200);
+}
+
+
+QScrollBar:vertical
+{
+	border: none;
+	margin: 21px 0px 21px 0px;
+	background-image: url(:/pattern/resources/pattern/p_1x1_x6.png);
+	background-color: rgb(225, 225, 225);
+}
+QScrollBar::handle:vertical
+{
+	background-color: rgb(240, 240, 240);
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(200, 200, 200);
+  	border-left-color: rgb(200, 200, 200);
+  	border-right-color: rgb(100, 100, 100);
+  	border-bottom-color: rgb(100, 100, 100);
+}
+QScrollBar::handle:vertical:disabled
+{
+	background-image: url(:/pattern/resources/pattern/p_1x1_x6.png);
+	background-color: rgb(225, 225, 225);
+	border-style: groove;
+  	border-width: 2px;
+  	border-top: none;
+  	border-left: none;
+  	border-right: none;
+  	border-bottom: none;
+}
+QScrollBar::add-line:vertical
+{
+	image: url(:/icon/resources/icon/downarrow.png);
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(200, 200, 200);
+  	border-left-color: rgb(200, 200, 200);
+  	border-right-color: rgb(100, 100, 100);
+  	border-bottom-color: rgb(100, 100, 100);
+	background-color: rgb(237, 237, 237);
+
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+	width: 17px;
+    height: 17px;
+}
+QScrollBar::sub-line:vertical
+{
+	image: url(:/icon/resources/icon/uparrow.png);
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(200, 200, 200);
+  	border-left-color: rgb(200, 200, 200);
+  	border-right-color: rgb(100, 100, 100);
+  	border-bottom-color: rgb(100, 100, 100);
+	background-color: rgb(237, 237, 237);
+
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+	width: 17px;
+    height: 17px;
+}
+QScrollBar::sub-line:vertical:pressed
+{
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(100, 100, 100);
+  	border-left-color: rgb(100, 100, 100);
+  	border-right-color: rgb(200, 200, 200);
+  	border-bottom-color: rgb(200, 200, 200);
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+QScrollBar::add-line:vertical:pressed
+{
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(100, 100, 100);
+  	border-left-color: rgb(100, 100, 100);
+  	border-right-color: rgb(200, 200, 200);
+  	border-bottom-color: rgb(200, 200, 200);
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical { background: none; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: none; }
+
+QScrollBar:horizontal
+{
+	border: none;
+	margin: 0px 21px 0px 21px;
+	background-image: url(:/pattern/resources/pattern/p_1x1_x6.png);
+	background-color: rgb(240, 240, 240);
+}
+QScrollBar::handle:horizontal
+{
+	background-color: rgb(240, 240, 240);
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(200, 200, 200);
+  	border-left-color: rgb(200, 200, 200);
+  	border-right-color: rgb(100, 100, 100);
+  	border-bottom-color: rgb(100, 100, 100);
+}
+QScrollBar::handle:horizontal:disabled
+{
+	background-image: url(:/pattern/resources/pattern/p_1x1_x6.png);
+	background-color: rgb(240, 240, 240);
+	border-style: groove;
+  	border-width: 2px;
+  	border-top: none;
+  	border-left: none;
+  	border-right: none;
+  	border-bottom: none;
+}
+QScrollBar::add-line:horizontal
+{
+	image: url(:/icon/resources/icon/rightarrow.png);
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(200, 200, 200);
+  	border-left-color: rgb(200, 200, 200);
+  	border-right-color: rgb(100, 100, 100);
+  	border-bottom-color: rgb(100, 100, 100);
+	background-color: rgb(237, 237, 237);
+
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+	width: 17px;
+    height: 17px;
+}
+QScrollBar::sub-line:horizontal
+{
+	image: url(:/icon/resources/icon/leftarrow.png);
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(200, 200, 200);
+  	border-left-color: rgb(200, 200, 200);
+  	border-right-color: rgb(100, 100, 100);
+  	border-bottom-color: rgb(100, 100, 100);
+	background-color: rgb(237, 237, 237);
+
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+	width: 17px;
+    height: 17px;
+}
+QScrollBar::sub-line:horizontal:pressed
+{
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(100, 100, 100);
+  	border-left-color: rgb(100, 100, 100);
+  	border-right-color: rgb(200, 200, 200);
+  	border-bottom-color: rgb(200, 200, 200);
+	subcontrol-position: left;
+	subcontrol-origin: margin;
+}
+QScrollBar::add-line:horizontal:pressed
+{
+	border-style: groove;
+  	border-width: 2px;
+  	border-top-color: rgb(100, 100, 100);
+  	border-left-color: rgb(100, 100, 100);
+  	border-right-color: rgb(200, 200, 200);
+  	border-bottom-color: rgb(200, 200, 200);
+	subcontrol-position: right;
+	subcontrol-origin: margin;
+}
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal { background: none; }
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal { background: none; }</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>5</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="frame_top">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="pushButton_save">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="icon">
+            <iconset resource="../ui_resources.qrc">
+             <normaloff>:/icon/resources/icon/save.png</normaloff>:/icon/resources/icon/save.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_title">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Инженер - список завершенных операций</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_close">
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>X</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_main">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="spacing">
+          <number>11</number>
+         </property>
+         <property name="leftMargin">
+          <number>11</number>
+         </property>
+         <property name="topMargin">
+          <number>11</number>
+         </property>
+         <property name="rightMargin">
+          <number>11</number>
+         </property>
+         <property name="bottomMargin">
+          <number>11</number>
+         </property>
+         <item>
+          <widget class="QTableView" name="tableView">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../ui_resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

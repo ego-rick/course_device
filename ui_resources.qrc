@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>resources/icon/check.png</file>
+    <file>resources/icon/save.png</file>
+    <file>resources/icon/logo.png</file>
+    <file>resources/icon/main_ico.png</file>
+    <file>resources/icon/close.png</file>
+    <file>resources/icon/downarrow.png</file>
+    <file>resources/icon/hide.png</file>
+    <file>resources/icon/leftarrow.png</file>
+    <file>resources/icon/rightarrow.png</file>
+    <file>resources/icon/uparrow.png</file>
+  </qresource>
+  <qresource prefix="pattern">
+    <file>resources/pattern/p_1x1_x6.png</file>
+    <file>resources/pattern/p_2x2_x4.png</file>
+  </qresource>
+  <qresource prefix="font">
+    <file>resources/font/Flexi_IBM_VGA_False.ttf</file>
+  </qresource>
+</RCC>
